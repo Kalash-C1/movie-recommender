@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendations Page</title>
+    <style>
+        <!DOCTYPE html>
+<head>
+    <title>Recommendations Page</title>
+    <style>
+        /* CSS styles for Recommendations Page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        li {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .content-container p {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 30px;
+            color: #777; /* Add color for the "Sorry" text */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-container">
+            <h1>Recommended Movies</h1>
+            {% if recommendations %}
+                <ul>
+                    {% for movie in recommendations %}
+                        <li>{{ movie }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Sorry, the movie is currently not available in our database.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>    
